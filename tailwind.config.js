@@ -15,9 +15,11 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                'brand-red': '#e53e3e',
-                'brand-dark': '#1a1a1a',
-                'brand-gray': '#2d3748',
+                gray: require('tailwindcss/colors').stone,
+                'brand-red': '#C5A059', // Gold
+                'brand-dark': '#1F1712', // Dark Coffee
+                'brand-gray': '#4A3B32', // Medium Brown
+                'brand-cream': '#F5E6D3', // Light Cream
             },
         },
     },

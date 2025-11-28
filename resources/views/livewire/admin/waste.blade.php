@@ -20,19 +20,19 @@
                                 <option value="{{ $product->id }}">{{ $product->name }} (Stock: {{ $product->stock }})</option>
                             @endforeach
                         </select>
-                        @error('product_id') <span class="text-red-500">{{ $message }}</span>@enderror
+                        @error('product_id') <span class="text-brand-red">{{ $message }}</span>@enderror
                     </div>
                     <div class="mb-4">
                         <label for="quantity" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Quantity:</label>
                         <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="quantity" wire:model="quantity">
-                        @error('quantity') <span class="text-red-500">{{ $message }}</span>@enderror
+                        @error('quantity') <span class="text-brand-red">{{ $message }}</span>@enderror
                     </div>
                     <div class="mb-4">
                         <label for="reason" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Reason:</label>
                         <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="reason" wire:model="reason" placeholder="e.g. Expired, Spilled">
-                        @error('reason') <span class="text-red-500">{{ $message }}</span>@enderror
+                        @error('reason') <span class="text-brand-red">{{ $message }}</span>@enderror
                     </div>
-                    <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full">Log Waste</button>
+                    <button type="submit" class="bg-brand-red hover:bg-brand-red/80 text-white font-bold py-2 px-4 rounded w-full">Log Waste</button>
                 </form>
             </div>
 

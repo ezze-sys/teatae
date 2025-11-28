@@ -11,7 +11,7 @@
                 </div>
             @endif
 
-            <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3">Create New Product</button>
+            <button wire:click="create()" class="bg-brand-gray hover:bg-brand-gray/80 text-white font-bold py-2 px-4 rounded my-3">Create New Product</button>
 
             @if($isOpen)
                 @include('livewire.admin.create_product')
@@ -39,8 +39,8 @@
                         <td class="border px-4 py-2 text-gray-900 dark:text-gray-200">{{ $product->is_stock_managed ? $product->stock : '-' }}</td>
                         <td class="border px-4 py-2 text-gray-900 dark:text-gray-200">{{ $product->category->name }}</td>
                         <td class="border px-4 py-2">
-                            <button wire:click="edit({{ $product->id }})" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Edit</button>
-                            <button wire:click="delete({{ $product->id }})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Delete</button>
+                            <button wire:click="edit({{ $product->id }})" class="bg-brand-gray hover:bg-brand-gray/80 text-white font-bold py-1 px-2 rounded">Edit</button>
+                            <button wire:click="delete({{ $product->id }})" class="bg-brand-red hover:bg-brand-red/80 text-white font-bold py-1 px-2 rounded">Delete</button>
                         </td>
                     </tr>
                     @endforeach
