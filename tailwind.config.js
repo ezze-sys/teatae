@@ -16,10 +16,13 @@ export default {
             },
             colors: {
                 gray: require('tailwindcss/colors').stone,
-                'brand-red': '#C5A059', // Gold
+                'brand-red': '#C5A059', // Gold (Legacy)
+                'brand-gold': '#C5A059', // Gold
                 'brand-dark': '#1F1712', // Dark Coffee
                 'brand-gray': '#4A3B32', // Medium Brown
-                'brand-cream': '#F5E6D3', // Light Cream
+                'brand-cream': '#F9F6EE', // Bone White (Updated)
+                'brand-bone': '#F9F6EE', // Bone White
+                'brand-tan': '#E6D2B5', // Tan
             },
         },
     },

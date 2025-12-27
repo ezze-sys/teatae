@@ -8,16 +8,14 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', App\Livewire\Admin\Dashboard::class)->name('dashboard');
-    Route::get('/products', App\Livewire\Admin\Products::class)->name('products');
-    Route::get('/customers', App\Livewire\Admin\Customers::class)->name('customers');
-    Route::get('/waste', App\Livewire\Admin\Waste::class)->name('waste');
-    
-    Route::get('/test-alpine', function () {
-    return view('test_alpine');
-});
+    Route::middleware(['role:admin'])->group(function () {
+        Route::get('/dashboard', App\Livewire\Admin\Dashboard::class)->name('dashboard');
+        Route::get('/products', App\Livewire\Admin\Products::class)->name('products');
+        Route::get('/customers', App\Livewire\Admin\Customers::class)->name('customers');
+        Route::get('/waste', App\Livewire\Admin\Waste::class)->name('waste');
+    });
 
-Route::get('/pos', App\Livewire\Pos\Pos::class)->name('pos');
+    Route::get('/pos', App\Livewire\Pos\Pos::class)->name('pos');
 });
 
 Route::middleware('auth')->group(function () {
